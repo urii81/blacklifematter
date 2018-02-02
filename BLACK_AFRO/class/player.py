@@ -1,6 +1,6 @@
 from script import *
 
-
+#hola
 class Player:
     def __init__(self):
         self._pocket = {0.5:1,1:0,2:0,5:0,10:0,20:0,50:0,100:0,500:0,1000:0}
