@@ -1,5 +1,6 @@
 import numpy as np
 import  random as rand
+
 class Deck:
 
     def __init__(self):
@@ -53,9 +54,9 @@ class Deck:
             self._outlist = self._outlist[::-1] # reverse deck
 
         return (self._outlist) # output: shuffled deck 
-
+'''
 deck=Deck(6)
 print(deck.getdeck())
 deck.shuffle_deck('low')
 print(deck.getdeck())
-
+'''
