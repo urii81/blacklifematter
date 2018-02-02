@@ -6,7 +6,7 @@ import os # general functions of operating system
 #                                                                     #
 # PROGRAM: BLACKJACK BASIC ACTIONS AND FUNCTIONS                      #
 # AUTHOR: ORIOL TUBELLA, SERGI DOMINGO                                #
-# DATE: 13/01/2018                                                    #
+# DATE: 02/02/2018                                                    #
 # VERSION: 1                                                          #
 #                                                                     #
 #######################################################################
