@@ -56,6 +56,7 @@ def main():
     im = PhotoImage(file='images/logo01.gif')
     if 'nt' == os.name:
         app.wm_iconbitmap(bitmap = "images/logo01.ico")
+        app.tk.call('wm','iconphoto',app._w,im)
     else:
         app.tk.call('wm','iconphoto',app._w,im)
     
