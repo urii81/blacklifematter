@@ -1,4 +1,5 @@
 from tkinter import *
+import os
 
 class MainW(Tk):
     def __init__(self, master):
@@ -50,9 +51,14 @@ class PlayerPlan:
 def main():
     
     app = MainW(None)
-    app.title("A.I. BlackJack Sim v1.0")
+    app.title('A.I. BlackJack Sim v1.0')
     app.geometry('{}x{}'.format(1000, 700))
-    #app.iconbitmap()
+    im = PhotoImage(file='images/logo01.gif')
+    if 'nt' == os.name:
+        app.wm_iconbitmap(bitmap = "images/logo01.ico")
+    else:
+        app.tk.call('wm','iconphoto',app._w,im)
+    
     app.mainloop()
 
 if __name__ == '__main__':
