@@ -5,23 +5,24 @@ class Deck:
 
     _suits=["hearts","diamonds","clovers","pikes"]
     _Num_suits = 4 # number of suits in a deck
-    _outlist=[]
     _Num_cards = 52 # number of cards in a deck
     def __init__(self):
         pass
 
     def __init__(self,N_decks): # input:number of decks playing with
+        self._outlist=[]
         self._N_decks=N_decks
-        N_scards = self._N_cards/self._N_suits # number of cards in a suit
-        Num_totalCards = self._N_cards*self._N_decks # number of total cards
-            
-        self._outlist = np.zeros((N_tcards),dtype=int) # declare output deck
-        count = 0 # indexing array
+        Num_totalCards = self._Num_cards*self._N_decks # number of total cards
+        N_scards = Num_totalCards/self._Num_suits # number of cards in a suit
+        
 
-        for suit in suits:
+        for suit in self._suits:
            for i in range(1,14):
-            card=(i,suit)
-            self._outlist.append(card)
+                card=(i,suit)
+                print(self._outlist)
+                print(card)
+                self._outlist.append(card)
+        self._outlist=self._outlist*N_decks
 
     def getdeck(self):
         return self._outlist # output:ordenate deck
@@ -54,9 +55,20 @@ class Deck:
             self._outlist = self._outlist[::-1] # reverse deck
 
         return (self._outlist) # output: shuffled deck 
-'''
+
+    def pick_a_card_from_deck(self): #input:deck with N cards
+
+        picked_card = self._outlist[0] # pick the first card
+        del(self._outlist[0]) # delete this card from deck
+
+        return (picked_card,self._outlist) # o: p-c and new deck with N-1 cards   
+
 deck=Deck(6)
-print(deck.getdeck())
+print(type(deck.getdeck()))
+print("leeeeeeeeeen",len(deck.getdeck()))
 deck.shuffle_deck('low')
 print(deck.getdeck())
-'''
+card,deck=deck.pick_a_card_from_deck()
+print(card)
+print("new deck",deck)
+
