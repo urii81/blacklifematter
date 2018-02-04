@@ -16,9 +16,9 @@ __________.__                 __        ____.              __       ________.__
 
                                                                     Coders: urii81, xexi94
                                                                     Version: 1.0           
-                                                                                                                                   
+                                                                                                                               
                                                                     2018 productions       
-                                                                                                                                   
+https://github.com/urii81/blacklifematter.git                                                                                                                         
                                                                                                                           
 ################################################################################################
 
@@ -42,6 +42,8 @@ python3 (PL)
 numpy
 rand
 tkinter
+PIL
+ImageTk
 
 3) DOWNLOAD SOFTWARE
 
