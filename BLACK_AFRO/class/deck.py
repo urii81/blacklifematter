@@ -19,8 +19,6 @@ class Deck:
         for suit in self._suits:
            for i in range(1,14):
                 card=(i,suit)
-                print(self._outlist)
-                print(card)
                 self._outlist.append(card)
         self._outlist=self._outlist*N_decks
 
@@ -62,13 +60,17 @@ class Deck:
         del(self._outlist[0]) # delete this card from deck
 
         return (picked_card,self._outlist) # o: p-c and new deck with N-1 cards   
+    def __str__(self):
+        for card in self._outlist:
+            return  '{} {}'.format(card[0],card[1])
+    
 
-deck=Deck(6)
+'''deck=Deck(6)
 print(type(deck.getdeck()))
 print("leeeeeeeeeen",len(deck.getdeck()))
 deck.shuffle_deck('low')
 print(deck.getdeck())
 card,deck=deck.pick_a_card_from_deck()
 print(card)
-print("new deck",deck)
+print("new deck",deck)'''
 
