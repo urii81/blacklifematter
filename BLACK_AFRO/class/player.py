@@ -47,7 +47,8 @@ class Player:
 			points2=points1+10
 
 		return points1,points2
-
+	def __str__(self):
+		return '{} {}'.format(self._name,self._ma)
 
 
 

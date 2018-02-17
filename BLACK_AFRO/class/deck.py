@@ -59,7 +59,8 @@ class Deck:
         picked_card = self._outlist[0] # pick the first card
         del(self._outlist[0]) # delete this card from deck
 
-        return (picked_card,self._outlist) # o: p-c and new deck with N-1 cards   
+        #return (picked_card,self._outlist) # o: p-c and new deck with N-1 cards   
+        return (picked_card)
     def __str__(self):
         for card in self._outlist:
             return  '{} {}'.format(card[0],card[1])
