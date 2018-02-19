@@ -1,5 +1,7 @@
 from deck import Deck
 from player import Player
+import sys
+
 class Partida:
 	
 	_players=[]
@@ -24,11 +26,12 @@ class Partida:
 					player.add_card_to_hand(self._baralla.pick_a_card_from_deck())
 
 	def initialization(self):
+		self._baralla.shuffle_deck("high")
 		#do 2 times 
 		for player in self._players:
-			hit(player.getName())
+			self.hit(player.getName())
 		for player in self._players:
-			hit(player.getName())
+			self.hit(player.getName())
 			#if player.getName == 'croupier':
 
 	def add_player(self,pasta,name):
@@ -44,13 +47,13 @@ class Partida:
 		#while dealer.points <17 : hit
 		#
 	def round(self):
-		for player in players:
+		for player in self._players:
 			if player.getName()!='croupier':
 				print("PLAYER",player.getName() )
 				print(" draw another card ¿?(Y or N)")
-				choice=raw_imput()  
+				choice=input()  
 				if choice =="Y":
-					hit(player.getName())   
+					self.hit(player.getName())   
 
 
 
@@ -59,4 +62,6 @@ partida1.add_player("100","Oriol")
 partida1.initialization()
 #partida1.hit("Oriol")
 #print (partida1.get_baralla())
+print(partida1.get_players())
+partida1.round()
 print(partida1.get_players())
