@@ -15,7 +15,7 @@ class Card:
 	def isAce(self):
 		return self._value==1
 
-	def __str__(self):
+	def __repr__(self):
 		return '{} {}'.format(self._value,self._suit)
 	
 

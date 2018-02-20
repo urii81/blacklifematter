@@ -18,7 +18,7 @@ class Deck:
 
         for suit in self._suits:
            for i in range(1,14):
-                card=(i,suit)
+                card=Card(i,suit)
                 self._outlist.append(card)
         self._outlist=self._outlist*N_decks
 
@@ -63,7 +63,7 @@ class Deck:
         return (picked_card)
     def __str__(self):
         for card in self._outlist:
-            return  '{} {}'.format(card[0],card[1])
+            return  '{} {}'.format(card.get_value(),card.get_suit())
     
 
 '''deck=Deck(6)

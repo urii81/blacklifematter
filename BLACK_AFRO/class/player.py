@@ -17,6 +17,10 @@ class Player:
 		for i in self._pocket.keys():
 			pasta+=(i*self._pocket[i])        
 		return pasta
+	def set_status(self,status):
+		self._status=status
+	def get_status(self):
+		return self._status
 
 	def sum_pocket(self, money):
 		self._pocket+=money
@@ -36,8 +40,8 @@ class Player:
 		points2=0
 		has_ace=False
 		for card in self._ma:
-
-			if card.isAce():
+			print(type(card))
+			if card.get_value()==1:
 				has_ace=True
 			if (card.get_value()==11 or card.get_value()==12 or card.get_value()==13):
 				points1+=10
@@ -47,7 +51,11 @@ class Player:
 			points2=points1+10
 
 		return points1,points2
-	def __str__(self):
+	def __repr__(self):
+		'''ma=[]
+								for card in self._ma:
+									print((card))
+									ma.append((card))'''
 		return '{} {}'.format(self._name,self._ma)
 
 
