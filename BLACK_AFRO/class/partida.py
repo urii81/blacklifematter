@@ -65,8 +65,9 @@ class Partida:
 					if not player.get_status():
 						print("Sorry you've lost")
 						choice="N"
-					print(" draw another card ¿?(Y or N)")
-					choice=input()  
+					else:
+						print(" draw another card ¿?(Y or N)")
+						choice=input()  
 
 
 	def check_magic_points(self,card): # input: inspecting card
